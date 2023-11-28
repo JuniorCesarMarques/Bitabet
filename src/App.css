@@ -1,0 +1,254 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,700;1,400&display=swap');
+
+:root {
+    --cor-primaria: #0F1923;
+    --cor-segundaria: #262F3C;
+    --color-buttons: #F12C4C;
+    --color-lines: #323B45;
+
+    --font-principal: 'Poppins', sans-serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+#user_container {
+    width: 220px;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#total_value_container {
+    cursor: default;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid var(--color-lines);
+}
+
+#money_icon {
+    color: rgb(217, 255, 3);
+}
+
+#deposit_button {
+    padding: 8px;
+    border-radius: 4px;
+    background-color: var(--color-buttons);
+    color: white;
+    cursor: pointer;
+
+}
+
+#person_container {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-lines);
+    border-radius: 5px;
+    cursor: default;
+}
+
+/*Previous and actual cards*/
+
+#previous_cards {
+    border-radius: 5px 5px 0 0;
+    margin: 8px 10px 0;
+    background-color: var(--cor-primaria);
+    height: 64px;
+    
+}
+
+#actual_cards {
+    position: relative;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 5px 5px;
+    margin: 0 10px;
+    background-color: var(--cor-primaria);
+    height: 200px;
+    border-top: 1px solid var(--color-lines);
+    overflow: hidden;
+}
+
+/*Normal/Auto*/ 
+
+#normal_auto {
+    display: flex;
+    padding: 20px;
+}
+
+.nav_button {
+    cursor: pointer;
+    color: white;
+    font-size: 0.7em;
+    width: 440px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--color-lines);
+    border-radius: 3px;
+}
+
+/*Bet value*/
+
+#bet_value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.increase_decrease {
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid var(--color-lines);
+    border-radius: 3px;
+    padding: 10px;
+    width: 100px;
+    color: white;
+    font-size: 0.7em;
+}
+
+#input_value {
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+/*Color selector*/
+
+#colors_container {
+    font-size: 0.8em;
+    padding: 20px;
+    color: white;
+}
+
+#colors {
+    font-weight: bolder;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.color_buttons {
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px;
+    width: 140px;
+}
+
+#red {
+    background-color: var(--color-buttons);
+}
+
+#white {
+    background-color: white;
+    color: var(--color-buttons);
+}
+
+#black {
+    background-color: var(--color-lines);
+}
+
+/* Start button*/
+
+#start_button_container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#start_button {
+    cursor: pointer;
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+    background-color: var(--color-buttons);
+    padding: 15px;
+    width: 95%;
+    border-radius: 5px;
+}
+
+/*Bar container*/
+
+#bar_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 95%;
+    border-radius: 4px;
+    background-color: var(--cor-segundaria);
+}
+
+#bar {
+    margin-left: 10px;
+    border-radius: 4px;
+    width: 95%;
+    height: 65%;
+    background-color: var(--color-buttons);
+    animation: animationBar 15s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animationBar {
+    0% {
+        width: 95%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+/*Timer*/ 
+
+#timer_container {
+    width: 109px;
+    font-weight: bolder;
+    font-size: 0.8em;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+}
+
+#countdown_container {
+    display: flex;
+}
+
+#milissec_container {
+    text-align: center;
+    width: 15px;
+}
