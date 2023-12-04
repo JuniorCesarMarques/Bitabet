@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import './CountDown.css'
 
-const Timer = () => {
+
+const CountDown = ({resetValues, payBet, textBar, setTextBar, resetAnimations , startAnimation, startGame}) => {
+
 
     const [seconds, setSeconds] = useState(15)
     const [milisseconds, setMilisseconds] = useState(59)
@@ -28,24 +31,53 @@ const Timer = () => {
     
             }
         }else {
-            setMilisseconds("00")
+            resetAnimations() 
+
+            setTextBar("Girando...")
+            startAnimation();
+
+
+            setTimeout(() => {
+                setTextBar("A bitabet girou!");
+
+                payBet();
+                resetValues();
+                
+
+                setTimeout(() => {
+
+
+
+                    startGame();
+
+                    setSeconds(15);
+                }, 2000)
+
+            }, 12000)
+
         }
 
-        
     }, [seconds])
 
-
+    
+    
 
   return (
-    <div id="timer_container">
-        <div>Girando em</div>
+    <div style={textBar === "Girando..." ? {justifyContent: "center"} : {}}
+    id="timer_container">
+        <div>{textBar}</div>
         <div id="countdown_container">
-            <div>{seconds}</div>
-            <div>:</div>
-            <div id="milissec_container">{milisseconds}</div>
+            <div 
+            style={textBar === "Girando..." || textBar === "A bitabet girou!" ? {display: "none"} : {}}>
+                {seconds}
+                </div>
+            <div 
+            style={textBar === "Girando..." || textBar === "A bitabet girou!" ? {display: "none"} : {}}>:</div>
+            <div 
+            style={textBar === "Girando..." || textBar === "A bitabet girou!" ? {display: "none"} : {}} id="milissec_container">{milisseconds}</div>
         </div>
     </div>
   );
 };
 
-export default Timer;
+export default CountDown;

@@ -1,12 +1,31 @@
 import React from "react";
+import './BetValue.css'
 
-const BetValue = () => {
+const BetValue = ({ inputStyle, inputValue, placeholder, setInputValue }) => {
+    const buttons = [{value: "1/2"}, {value: "2x"}]
+
+
+    const increaseDecreaseValue = (button) => {
+        if(button === buttons[0].value) {
+            setInputValue(inputValue / 2)
+            
+        } else{
+            setInputValue(inputValue * 2)
+        }
+    }
+
+
     return(
         <>
             <div id="bet_value">
-                <input type="number" placeholder="Quantia" id="input_value" />
-                    <div className="increase_decrease" id="decrease_value">1/2</div>
-                    <div className="increase_decrease" id="increase_value">2x</div>
+                <input onChange={(e) => setInputValue(e.target.value)} 
+                type="number"
+                value={inputValue}
+                placeholder={placeholder} 
+                style={inputStyle} />
+
+
+                {buttons.map((button, index) => <div key={index} onClick={() => increaseDecreaseValue(button.value)} className="increase_decrease">{button.value}</div>)}
             </div>
         </>
     )

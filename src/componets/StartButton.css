@@ -1,0 +1,17 @@
+#start_button_container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+#start_button {
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+    background-color: var(--color-buttons);
+    padding: 15px;
+    width: 95%;
+    border-radius: 5px;
+
+}
+
