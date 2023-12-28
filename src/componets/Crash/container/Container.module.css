@@ -1,0 +1,23 @@
+.chronometer {
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+.countdown {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 225px;
+    z-index: 1;
+    
+}
+
+.controls {
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

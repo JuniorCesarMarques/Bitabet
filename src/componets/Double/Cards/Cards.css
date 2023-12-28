@@ -1,0 +1,61 @@
+.cards_container {
+    display: flex;
+    position: relative;
+    animation-fill-mode: backwards;
+}
+
+.cards_container * {
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-left: 5px;
+    width: 100px;
+    height: 100px;
+    color: white;
+
+}
+
+@keyframes carrocel_white{
+    0% {
+        left: 4778px;
+    }
+
+    75% {
+        left: -4148px;
+    }
+
+    100% {
+        left: -4148px;
+    }
+} 
+
+@keyframes carrocel_red{
+    0% {
+        left: 4778px;
+    }
+
+    75% {
+        left: -4987px;
+    }
+
+    100% {
+        left: -4987px;
+    }
+} 
+
+@keyframes carrocel_black{
+    0% {
+        left: 4778px;
+    }
+
+    75% {
+        left: -4883px;
+    }
+
+    100% {
+        left: -4883px;
+    }
+} 
+
+
+
+

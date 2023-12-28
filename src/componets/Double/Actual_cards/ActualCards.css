@@ -1,0 +1,14 @@
+#actual_cards {
+    position: relative;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border-radius: 0 0 5px 5px;
+    margin: 0 10px;
+    background-color: var(--cor-primaria);
+    height: 200px;
+    border-top: 1px solid var(--color-lines);
+    overflow: hidden;
+}

@@ -1,0 +1,138 @@
+
+.container {
+    background-color: hsl(195, 60%, 70%);
+    position: relative;
+    border: 5px solid red;
+    /* overflow: hidden; */
+    height: 565px;
+    width: 400px;
+    margin: 0 auto;
+
+}
+
+.animation_color {
+    animation: animation_color 10s;
+    animation-fill-mode: forwards;
+}
+
+
+.container_rocket {
+    width: 100%;
+    height: 320px;
+    top: 175px;
+    position: relative;
+
+}
+
+.animation_rocket {
+    animation: animation_rocket 3s;
+    animation-fill-mode: forwards;
+}
+
+.rocket {
+    z-index: 1;
+    top: 50px;
+    right: 90px;
+    position: absolute;
+    width: 200px;
+}
+
+.fire {
+    width: 80px;
+    z-index: 1;
+    transform: rotateX(180deg);
+    position: absolute;
+    top: 219px;
+    right: 156px;
+
+}
+
+.bang {
+    z-index: 3;
+    left: 40px;
+    top: 150px;
+    position: absolute;
+    width: 350px;
+
+}
+
+.elements {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -1000px;
+    width: 100%;
+}
+
+.animation_elements {
+    animation: animation_elements 50s linear infinite;
+    animation-fill-mode: forwards;
+}
+
+
+.background {
+    bottom: 110px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 400px;
+}
+
+.animation_background {
+    animation: animation_background 5s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation_background {
+    0% {
+        bottom: 110px;
+    }
+
+
+    100% {
+        bottom: -250px;
+        display: none;
+    }
+}
+
+@keyframes animation_color {
+    from {
+        background-color: hsl(195, 60%, 70%);
+    }
+
+    to {
+        background-color: hsl(0, 0%, 0%);
+    }
+}
+
+@keyframes animation_elements {
+    0% {
+        top: -1000px;
+    }
+
+
+    100% {
+        top: 500px;
+    }
+}
+
+@keyframes animation_stars{
+    0% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 60%;
+    }
+}
+
+@keyframes animation_rocket {
+    0% {
+        top: 175px;
+    }
+
+    100% {
+        top: -20px;
+    }
+}

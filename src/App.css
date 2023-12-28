@@ -1,19 +1,50 @@
-header {
+.main_header {
+    font-weight: bold;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
     background-color: var(--cor-primaria);
     color: white;
+    font-size: 1em;
 }
 
-#user_container {
+.create_account_button_header {
+    font-size: 0.8em;
+    background-color: var(--color-buttons);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+
+
+.container_logged_in {
     width: 220px;
     font-size: 0.8em;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
+.login {
+    text-decoration: none;
+    color: white;
+}
+
+.container_logged_out h1 {
+    font-size: 0.8em;
+}
+
+.container_logged_out {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: right;
+    gap: 15px;
+}
+
 
 #total_value_container {
     font-weight: bold;
@@ -23,6 +54,7 @@ header {
     align-items: center;
     border-radius: 5px;
     border: 1px solid var(--color-lines);
+    position: relative;
 }
 
 #total_value {
@@ -35,7 +67,7 @@ header {
     color: rgb(217, 255, 3);
 }
 
-#deposit_button {
+.deposit_button {
     padding: 8px;
     border-radius: 4px;
     background-color: var(--color-buttons);
@@ -52,6 +84,13 @@ header {
     border-radius: 5px;
     cursor: pointer;
     position: relative;
+}
+
+.animation_value {
+    color: red;
+    position: absolute;
+    opacity: 0%;
+
 }
 
 .menu {
@@ -90,8 +129,26 @@ header {
     background-color: rgb(201, 196, 196);
 }
 
+@keyframes animation_discount {
+    0% {
+        opacity: 0%;
+        right: 30px;
+        top: 0px;
+    }
 
-@keyframes animation_menu{
+    50% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+        right: 25px;
+        top: -8px;
+    }
+}
+
+
+@keyframes animation_menu {
     0% {
         opacity: 0;
     }
@@ -99,67 +156,4 @@ header {
     100% {
         opacity: 200px;
     }
-}
-
-
-
-  
-
-
-/*Normal/Auto*/ 
-
-#normal_auto {
-    display: flex;
-    padding: 20px;
-    
-}
-
-.nav_button {
-    cursor: pointer;
-    color: white;
-    font-size: 0.7em;
-    width: 440px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-}
-
-
-/*Color selector*/
-
-#colors_container {
-    font-size: 0.8em;
-    padding: 20px;
-    color: white;
-}
-
-#colors {
-    font-weight: bolder;
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
-
-.color_buttons {
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-    padding: 15px;
-    width: 140px;
-}
-
-#red {
-    background-color: var(--color-buttons);
-}
-
-#white {
-    background-color: white;
-    color: var(--color-buttons);
-}
-
-#black {
-    background-color: var(--color-lines);
 }

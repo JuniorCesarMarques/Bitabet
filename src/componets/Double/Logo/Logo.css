@@ -1,0 +1,22 @@
+.logo_container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: white;
+}
+
+.logo_container_elements {
+    position: relative;
+}
+
+.img_christmas {
+    width: 25px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+
+.logo_text {
+    font-size: 1.1em;
+}
