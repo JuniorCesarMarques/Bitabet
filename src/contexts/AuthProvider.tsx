@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useApi } from "../hooks/useApi";
-import { AuthContext } from "./AuthContext";
+import { AuthContext, SignUpType } from "./AuthContext";
 
 export const AuthProvider = ({ children }: { children: JSX.Element }) => {
   const [user, setUser] = useState(null);
@@ -12,6 +12,15 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
       setUser(userToken);
     }
   });
+
+  const signup = async (signupParam: SignUpType) => {
+    const data = await api.signup(signupParam);
+    if (data) {
+      return true;
+    }
+    
+    return false;
+  };
 
   const signin = async (email: string, password: string) => {
     const data = await api.signin(email, password);
@@ -34,6 +43,7 @@ export const AuthProvider = ({ children }: { children: JSX.Element }) => {
       value={{
         user,
         isUserLoggedIn: user != null && user != undefined,
+        signup,
         signin,
         signout,
       }}

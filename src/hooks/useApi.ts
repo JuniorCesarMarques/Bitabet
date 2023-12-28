@@ -5,10 +5,15 @@ const api = axios.create({
 });
 
 export const useApi = () => ({
+    signup: async (user: any) => {
+        const response = await api.post('/user', { user });
+        return response.data;
+    },
+
     signin: async (email: string, password: string) => {
         const response = await api.post('/login', { email, password });
         return response.data;
     },
-    
+
     logout: async () => { }
 });
