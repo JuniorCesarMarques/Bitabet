@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import "./Login.css";
-import Logo from "../Logo/Logo";
-import { AuthContext } from "../../../contexts/AuthContext";
+import Logo from "../../componets/Double/Logo/Logo";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const Login = () => {
   const auth = useContext(AuthContext);
