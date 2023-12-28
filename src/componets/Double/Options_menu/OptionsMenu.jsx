@@ -1,4 +1,4 @@
-const OptionsMenu = ({ setIsLoggedIn, display }) => {
+const OptionsMenu = ({ signout, display }) => {
     return ( 
         <div className={display}>
         <div className='options'>
@@ -25,7 +25,7 @@ const OptionsMenu = ({ setIsLoggedIn, display }) => {
           </span>
           <h1>Indique um amigo</h1>
         </div>
-        <div onClick={() => setIsLoggedIn(false)} className='options'>
+        <div onClick={() => signout()} className='options'>
         <span className="material-symbols-outlined">
           logout
           </span> 

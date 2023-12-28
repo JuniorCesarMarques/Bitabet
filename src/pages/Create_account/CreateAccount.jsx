@@ -1,7 +1,7 @@
 import './CreateAccount.css'
-import Logo from '../Logo/Logo';
+import Logo from '../../componets/Double/Logo/Logo';
 import { Link } from "react-router-dom"
-import { HeaderContext } from '../../../contexts/HeaderContext';
+import { HeaderContext } from '../../contexts/HeaderContext';
 import { useEffect, useState, useContext } from 'react';
 
 const CreateAccount = () => {
